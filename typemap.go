@@ -18,7 +18,7 @@ const typeMap = `
 [string]
 db_types = ["character", "character varying", "text", "money"]
 notnull_go_type = "string"
-nullable_go_type = "sql.NullString"
+nullable_go_type = "*string"
 
 [time]
 db_types = [
@@ -31,42 +31,42 @@ nullable_go_type = "*time.Time"
 [bool]
 db_types = ["boolean"]
 notnull_go_type = "bool"
-nullable_go_type = "bool"
+nullable_go_type = "*bool"
 
 [smallint]
 db_types = ["smallint"]
 notnull_go_type = "int16"
-nullable_go_type = "sql.NullInt64"
+nullable_go_type = "*int16"
 
 [integer]
 db_types = ["integer"]
 notnull_go_type = "int"
-nullable_go_type = "sql.NullInt64"
+nullable_go_type = "*int"
 
 [bigint]
 db_types = ["bigint"]
 notnull_go_type = "int64"
-nullable_go_type = "sql.NullInt64"
+nullable_go_type = "*int64"
 
 [smallserial]
 db_types = ["smallserial"]
 notnull_go_type = "uint16"
-nullable_go_type = "sql.NullInt64"
+nullable_go_type = "*uint16"
 
 [serial]
 db_types = ["serial"]
 notnull_go_type = "uint32"
-nullable_go_type = "sql.NullInt64"
+nullable_go_type = "*uint32"
 
 [real]
 db_types = ["real"]
 notnull_go_type = "float32"
-nullable_go_type = "sql.NullFloat64"
+nullable_go_type = "*float32"
 
 [numeric]
 db_types = ["numeric", "double precision"]
 notnull_go_type = "float64"
-nullable_go_type = "sql.NullFloat64"
+nullable_go_type = "*float64"
 
 [bytea]
 db_types = ["bytea"]
@@ -75,8 +75,8 @@ nullable_go_type = "byte"
 
 [json]
 db_types = ["json", "jsonb"]
-notnull_go_type = "[]byte"
-nullable_go_type = "[]byte"
+notnull_go_type = "interface{}"
+nullable_go_type = "*interface{}"
 
 [xml]
 db_types = ["xml"]
@@ -91,5 +91,5 @@ nullable_go_type = "*time.Duration"
 [default]
 db_types = ["*"]
 notnull_go_type = "interface{}"
-nullable_go_type = "interface{}"
+nullable_go_type = "*interface{}"
 `
