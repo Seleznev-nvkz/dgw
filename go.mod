@@ -1,4 +1,4 @@
-module github.com/achiku/dgw
+module github.com/Seleznev-nvkz/dgw
 
 go 1.15
 

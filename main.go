@@ -20,6 +20,7 @@ var (
 	customTmpl       = kingpin.Flag("template", "custom template path").String()
 	outFile          = kingpin.Flag("output", "output file path").Short('o').String()
 	noQueryInterface = kingpin.Flag("no-interface", "output without Queryer interface").Bool()
+	noMethods        = kingpin.Flag("no-methods", "output without query methods").Bool()
 )
 
 func main() {
@@ -30,7 +31,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	st, err := PgCreateStruct(conn, *schema, *typeMapFilePath, *pkgName, *customTmpl, *exTbls)
+	st, err := PgCreateStruct(conn, *schema, *typeMapFilePath, *pkgName, *customTmpl, *noMethods, *exTbls)
 	if err != nil {
 		log.Fatal(err)
 	}

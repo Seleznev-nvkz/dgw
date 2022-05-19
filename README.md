@@ -20,7 +20,7 @@ Personally, I prefer Table/Row Data Gateway over ORM/Query Builder approach when
 ## Installation
 
 ```
-go get -u github.com/achiku/dgw
+go get -u github.com/Seleznev-nvkz/dgw
 ```
 
 
