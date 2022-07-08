@@ -49,7 +49,7 @@ dgw postgres://dbuser@localhost/dbname?sslmode=disable
 
 ## Example
 
-- https://github.com/achiku/dgw/tree/master/example
+- https://github.com/Seleznev-nvkz/dgw/tree/master/example
 
 ```sql
 CREATE TABLE t1 (
